@@ -5,8 +5,22 @@ public class Book {
     private Boolean available;
     private int stock;
 
-    public Book() {
+    public Book(String title,
+            String author,
+            String isbn,
+            String genre,
+            java.time.LocalDate publishDate,
+            Boolean available,
+            int stock) {
 
+        // initialising lots of variables
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.genre = genre;
+        this.publishDate = publishDate;
+        this.available = available;
+        this.stock = stock;
     }
 
     public String getTitle() {
@@ -35,6 +49,10 @@ public class Book {
 
     public int getStock() {
         return stock;
+    }
+
+    public void setAvailable(Boolean n) {
+        available = n;
     }
 
 }
