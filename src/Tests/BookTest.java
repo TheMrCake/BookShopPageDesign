@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class BookTest {
     @Test
-    void demotTestMethod() {
+    void DemoMethod() {
         assertTrue(true);
     }
 }

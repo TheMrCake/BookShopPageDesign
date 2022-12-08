@@ -5,7 +5,9 @@ public class Customer {
 
     private String firstName, lastName, emailAddr, phoneNumber, id;
 
-    private static HashMap<String, ArrayList<Reservation>> reservations = new HashMap<String, ArrayList<Reservation>>();
+    private static HashMap<String, ArrayList<Reservation>> reservations = new HashMap<>();
+
+    private static HashMap<String, Customer> customers = new HashMap<>();
 
     public Customer(String firstName,
             String lastName,
@@ -17,6 +19,14 @@ public class Customer {
         this.emailAddr = emailAddr;
         this.phoneNumber = phoneNumber;
         this.id = id;
+    }
+    
+    public static ArrayList<Reservation> getReservations(String customerID) {
+        return reservations.get(customerID);
+    }
+
+    public static Customer getCustomer(String customerID) {
+        return customers.get(customerID);
     }
 
     public String getFirstName() {
@@ -38,18 +48,16 @@ public class Customer {
     public String getID() {
         return id;
     }
-
-    public ArrayList<Reservation> getReservations(String customerID) {
-        return reservations.get(customerID);
+    
+    public ArrayList<Reservation> getReservations() {
+        return reservations.get(this.id);
     }
 
     public void addReservation(Reservation reservation) {
         if (!reservations.containsKey(reservation.getCustomer().getID())) {
             reservations.put(reservation.getCustomer().getID(), new ArrayList<Reservation>());
         }
-        ArrayList<Reservation> foo = reservations.get(reservation.getCustomer().getID());
-        foo.add(reservation);
-        reservations.put(id, foo);
+        reservations.get(reservation.getCustomer().getID()).add(reservation);
     }
 
 }

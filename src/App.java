@@ -8,7 +8,7 @@ public class App {
 
         customer.addReservation(reservation);
 
-        for (Reservation foo : customer.getReservations("1")) {
+        for (Reservation foo : Customer.getReservations("1")) {
             System.out.println(foo.getBook().getTitle());
         }
 
