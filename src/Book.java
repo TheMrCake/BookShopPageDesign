@@ -55,4 +55,8 @@ public class Book {
         available = n;
     }
 
+    public void setStock(int n) {
+        stock = n;
+    }
+
 }
