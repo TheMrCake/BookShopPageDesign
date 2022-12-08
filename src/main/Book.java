@@ -1,5 +1,5 @@
-public class Book {
 
+public class Book {
     private String title, author, isbn, genre;
     private java.time.LocalDate publishDate;
     private Boolean available;

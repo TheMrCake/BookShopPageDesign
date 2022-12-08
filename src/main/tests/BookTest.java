@@ -1,12 +1,12 @@
-package Tests;
+package tests;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class ReservationTest {
+public class BookTest {
     @Test
-    void DemoTest() {
+    void DemoMethod() {
         assertTrue(true);
     }
 }

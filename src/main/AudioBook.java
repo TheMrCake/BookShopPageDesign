@@ -1,21 +1,22 @@
-public class Comic extends Book {
 
-    private String illustrator;
+public class AudioBook extends Book {
 
-    public Comic(String title,
+    private String narrator;
+
+    public AudioBook(String title,
             String author,
-            String illustrator,
+            String narrator,
             String isbn,
             String genre,
             java.time.LocalDate publishDate,
             Boolean available,
             int stock) {
         super(title, author, isbn, genre, publishDate, available, stock);
-        this.illustrator = illustrator;
+        this.narrator = narrator;
     }
 
-    public String getIllustrator() {
-        return illustrator;
+    public String getNarrator() {
+        return narrator;
     }
 
 }
