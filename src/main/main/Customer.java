@@ -21,6 +21,8 @@ public class Customer {
         this.emailAddr = emailAddr;
         this.phoneNumber = phoneNumber;
         this.id = id;
+
+        customers.put(this.id, this);
     }
     
     public static ArrayList<Reservation> getReservations(String customerID) {
