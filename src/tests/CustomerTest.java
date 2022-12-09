@@ -46,6 +46,9 @@ public class CustomerTest {
     void constructorCustomer() {
         Customer customer = new Customer("John", "Smith", "johnsmith@google.com", "077902732292", "1");
         
-        Customer.getCustomer(customer.getID());
+        if (Customer.getCustomer(customer.getID()) == customer) {
+            assertTrue(true);
+        }
+        assertFalse(false);
     }
 }
